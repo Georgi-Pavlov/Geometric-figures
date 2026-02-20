@@ -28,3 +28,14 @@ if figure == "triangle":
         else:
             print(f"The figure is a {figure.type_()} triangle with perimeter: {figure.perimeter()} and area: {figure.area()}")
             break
+
+elif figure == "circle":
+    while True:
+        try:
+            radius = float(input("Please enter the radius of the circle: "))
+            figure = figures.Circle(radius)
+            print(f"The figure is a circle of radius: {radius} with perimeter: {figure.perimeter()} and area: {figure.area()}")
+            break
+        except ValueError:
+            print("Invalid input. Please try again.")
+

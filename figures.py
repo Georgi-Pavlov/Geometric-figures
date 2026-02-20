@@ -1,4 +1,4 @@
-from math import sqrt
+from math import sqrt, pi
 
 class Triangle:
     def __init__(self, a, b, c):
@@ -26,3 +26,13 @@ class Triangle:
     def area(self):
         s = self.perimeter() / 2
         return f"{sqrt(s * (s - self.a) * (s - self.b) * (s - self.c)):.2f}"
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def perimeter(self):
+        return f"{(2 * pi * self.radius):.2f}"
+
+    def area(self):
+        return f"{(pi * self.radius ** 2):.2f}"
